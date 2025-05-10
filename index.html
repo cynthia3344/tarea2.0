@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web Interactiva</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+        .black-white {
+            background-color: black;
+            color: white;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a mi página web</h1>
+    <p>Esta es una página con varios elementos interactivos.</p>
+    
+    <h2>Hipervínculos</h2>
+    <p><a href="https://www.google.com" target="_blank">Ir a Google</a></p>
+    <p><a href="https://www.wikipedia.org" target="_blank">Ir a Wikipedia</a></p>
+    
+    <h2>Texto de ejemplo</h2>
+    <p>Este es un texto de ejemplo para demostrar cómo se ve la página web con diferentes elementos.</p>
+    
+    <h2>Imagen</h2>
+    <img src="ilove80s.png" alt="Imagen de ejemplo" width="300">
+    
+    <h2>Video de YouTube</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        title="YouTube video player"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe>
+    
+    <br>
+    <button id="toggleBtn" onclick="toggleColorMode()">Cambiar a Blanco y Negro</button>
+    
+    <script>
+        function toggleColorMode() {
+            const body = document.body;
+            const btn = document.getElementById("toggleBtn");
+            body.classList.toggle("black-white");
+            btn.textContent = body.classList.contains("black-white") 
+                ? "Cambiar a Modo Normal" 
+                : "Cambiar a Blanco y Negro";
+        }
+    </script>
+</body>
+</html>
